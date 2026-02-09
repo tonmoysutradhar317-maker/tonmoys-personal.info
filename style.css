@@ -536,3 +536,69 @@ small {
   .stats { flex-direction: column; gap: 15px; }
   .profile-card .card { width: 90%; padding: 25px; }
 }
+/* ===== Scenery watermark (global, premium) ===== */
+:root {
+  --wm-opacity: 0.09;     /* overall visibility */
+  --wm-blur: 0px;         /* try 0.6px if you want softer */
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Put your page content above the watermark */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* The watermark layers live behind content */
+body.has-scenery::before,
+body.has-scenery::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70vh;                 /* >= 2/3 of screen */
+  pointer-events: none;
+  z-index: 0;
+  opacity: var(--wm-opacity);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  filter: blur(var(--wm-blur));
+  transform: translateZ(0);
+}
+
+/* Layer 1: main outline */
+body.has-scenery::before {
+  background-image: url("scenery-outline.svg");
+  animation: wmFloat 14s ease-in-out infinite;
+}
+
+/* Layer 2: subtle parallax + slightly different scale/position */
+body.has-scenery::after {
+  background-image: url("scenery-outline.svg");
+  opacity: calc(var(--wm-opacity) * 0.55);
+  background-size: 110% auto;
+  background-position: 50% 102%;
+  animation: wmDrift 22s ease-in-out infinite;
+}
+
+@keyframes wmFloat {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50%      { transform: translate3d(0, -10px, 0); }
+}
+
+@keyframes wmDrift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.00); }
+  50%      { transform: translate3d(12px, -6px, 0) scale(1.02); }
+}
+
+/* Optional: reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  body.has-scenery::before,
+  body.has-scenery::after { animation: none; }
+}
