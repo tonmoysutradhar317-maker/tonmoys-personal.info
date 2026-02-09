@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Tonmoy Sutradhar</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2 class="logo">Tonmoy</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cricket.html">Cricket</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-section">
+    <div class="content" data-aos="fade-up">
+      <h1>My Skills</h1>
+
+      <div class="skill">
+        <h3>Batting</h3>
+        <div class="skill-bar" data-skill="100%"></div>
+      </div>
+      <div class="skill">
+        <h3>Bowling</h3>
+        <div class="skill-bar" data-skill="70%"></div>
+      </div>
+      <div class="skill">
+        <h3>Fielding</h3>
+        <div class="skill-bar" data-skill="90%"></div>
+      </div>
+      <div class="skill">
+        <h3>Fitness</h3>
+        <div class="skill-bar" data-skill="93%"></div>
+      </div>
+      <div class="skill">
+        <h3>Teamwork</h3>
+        <div class="skill-bar" data-skill="98%"></div>
+      </div>
+      <div class="skill">
+        <h3>Astronomy & Astrophysics</h3>
+        <div class="skill-bar" data-skill="68%"></div>
+      </div>
+      <div class="skill">
+        <h3>Cricket Analyzing</h3>
+        <div class="skill-bar" data-skill="90%"></div>
+      </div>
+      <div class="skill">
+        <h3>Anime Analyzing</h3>
+        <div class="skill-bar" data-skill="80%"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Tonmoy Sutradhar</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Skill bar animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const bars = document.querySelectorAll('.skill-bar');
+      bars.forEach(bar => {
+        const value = bar.getAttribute('data-skill');
+        bar.style.width = '0';
+        setTimeout(() => {
+          bar.style.width = value;
+        }, 500);
+      });
+    });
+  </script>
+
+</body>
+</html>

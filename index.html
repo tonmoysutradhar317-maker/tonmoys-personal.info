@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tonmoy Sutradhar | Personal Website</title>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2 class="logo">Tonmoy</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cricket.html">Cricket</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Tonmoy Sutradhar</h1>
+      <h3>Student | Aspiring Cricketer</h3>
+      <p>
+        Hard work, discipline, and consistency is my game.
+      </p>
+      <button class="btn" onclick="openProfile()">View Profile</button>
+    </div>
+  </section>
+  
+  <!-- Profile Card (Hidden by default) -->
+  <section class="profile-card" id="profileCard">
+    <div class="card">
+      <span class="close-btn" onclick="closeProfile()">×</span>
+  
+      <img src="./profile.jpg" alt="Tonmoy Sutradhar">
+  
+      <h2>Tonmoy Sutradhar</h2>
+      <h4>Student | Aspiring Cricketer</h4>
+  
+      <p>
+        Discipline, hard work, and consistency —  
+        this is not just my game, this is my lifestyle.
+      </p>
+  
+      <div class="tags">
+        <span>Cricket</span>
+        <span>Fitness</span>
+        <span>Leadership</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Tonmoy Sutradhar</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function openProfile() {
+      document.getElementById("profileCard").style.display = "flex";
+    }
+    function closeProfile() {
+      document.getElementById("profileCard").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
