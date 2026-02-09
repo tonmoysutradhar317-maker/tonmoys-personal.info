@@ -98,3 +98,12 @@ card.addEventListener("click", () => {
   card.style.transition = "transform 0.8s ease";
   card.style.transform = `rotateX(${isFlipped ? 180 : 0}deg) rotateY(0deg)`;
 });
+(function () {
+  const path = (location.pathname || "").toLowerCase();
+  const isContact =
+    path.endsWith("/contact.html") ||
+    path.endsWith("contact.html") ||
+    path.endsWith("/contact");
+
+  if (!isContact) document.body.classList.add("has-scenery");
+})();
