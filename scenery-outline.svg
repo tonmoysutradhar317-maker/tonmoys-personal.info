@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <style>
+      .s{fill:none;stroke:#ffffff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;opacity:.55}
+      .t{opacity:.35}
+    </style>
+  </defs>
+
+  <path class="s" d="M-40 560 L160 410 L290 510 L420 360 L560 520 L710 300 L900 520 L1040 420 L1240 560" />
+  <path class="s t" d="M-60 610 L170 470 L320 580 L470 420 L610 600 L770 360 L940 600 L1100 490 L1260 610" />
+
+  <path class="s" d="M40 635 V560 H80 V515 H120 V560 H160 V500 H220 V560 H260 V530 H310 V560 H350 V490 H420 V560 H460 V520 H520 V560 H560 V480 H620 V560 H660 V525 H730 V560 H770 V505 H830 V560 H870 V535 H940 V560 H980 V495 H1040 V560 H1090 V520 H1160 V560 V635" opacity=".45"/>
+
+  <path class="s" d="M-30 690 C70 650, 170 730, 270 690 C370 650, 470 730, 570 690 C670 650, 770 730, 870 690 C970 650, 1070 730, 1170 690 C1270 650, 1370 730, 1470 690" opacity=".35"/>
+</svg>
